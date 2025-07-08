@@ -1,15 +1,13 @@
 package com.url.shortener.Models;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.*;
 
-import jakarta.persistence.GenerationType;
 import lombok.Getter;
 import lombok.Setter;
-import org.springframework.data.annotation.Id;
 
 @Entity
 @Getter
-@Setter 
+@Setter
+@Table(name = "users")
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -18,5 +16,6 @@ public class User {
     private String password;
     private String role;
     private String username;
+
 
 }
